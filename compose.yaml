@@ -1,10 +1,8 @@
 services:
   mysql:
-    image: 'mysql:latest'
+    image: 'mysql:8.0.34-oracle'
     environment:
-      - 'MYSQL_DATABASE=mydatabase'
-      - 'MYSQL_PASSWORD=secret'
-      - 'MYSQL_ROOT_PASSWORD=verysecret'
-      - 'MYSQL_USER=myuser'
+      - 'MYSQL_DATABASE=gx_book_recommendation'
+      - 'MYSQL_ROOT_PASSWORD=123456'
     ports:
-      - '3306'
+      - '3306:3306'

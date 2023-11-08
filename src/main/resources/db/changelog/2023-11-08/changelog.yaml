@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - include:
+      file: "access_role_init_table.sql"
+      relativeToChangelogFile: true
+  - include:
+      file: "author_init_table.sql"
+      relativeToChangelogFile: true
+  - include:
+      file: "user_init_table.sql"
+      relativeToChangelogFile: true
+  - include:
+      file: "book_init_table.sql"
+      relativeToChangelogFile: true
+  - include:
+      file: "book_review_init_table.sql"
+      relativeToChangelogFile: true

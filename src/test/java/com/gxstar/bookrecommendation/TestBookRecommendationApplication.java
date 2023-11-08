@@ -1,5 +1,6 @@
 package com.gxstar.bookrecommendation;
 
+import com.gxstar.bookrecommendation.starter.BookRecommendationApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
@@ -13,7 +14,7 @@ public class TestBookRecommendationApplication {
     @Bean
     @ServiceConnection
     MySQLContainer<?> mysqlContainer() {
-        return new MySQLContainer<>(DockerImageName.parse("mysql:latest"));
+        return new MySQLContainer<>(DockerImageName.parse("mysql:8.0.34-oracle"));
     }
 
     public static void main(String[] args) {

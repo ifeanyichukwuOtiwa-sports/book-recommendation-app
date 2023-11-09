@@ -21,7 +21,7 @@ public class Book {
     private Long id;
     private String title;
     private String isbn;
-    private int reviewCount;
+    private Double reviewCount;
     private BigDecimal rating;
 
     @ManyToOne

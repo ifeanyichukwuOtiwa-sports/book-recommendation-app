@@ -5,3 +5,9 @@ spring:
     url: jdbc:mysql://localhost:3306/gx_book_recommendation
     password: 123456
     username: root
+
+book-recommendation:
+  jwt:
+    secret: gxstar
+    expiration-ms: 86400000
+    cookie: gxstarSecret

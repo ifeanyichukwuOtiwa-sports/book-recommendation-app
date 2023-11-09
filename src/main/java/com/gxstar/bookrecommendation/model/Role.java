@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 @Getter
 @ToString
 @AllArgsConstructor
@@ -13,4 +16,10 @@ public enum Role {
     SUPERADMIN("superadmin");
 
     private final String name;
+
+    public static Role of(final String accessRole) {
+        return Arrays.stream(Role.values())
+                .filter(role -> Objects.equals(role.name, accessRole))
+                .findAny().orElse(USER);
+    }
 }

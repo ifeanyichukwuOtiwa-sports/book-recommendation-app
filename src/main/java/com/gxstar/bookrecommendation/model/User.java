@@ -37,6 +37,7 @@ public class User {
     private String email;
     @OneToOne
     @JoinColumn(name="access_role_id", referencedColumnName = "id")
-    private AccessRole role;
+    private AccessRole accessRole;
+
 
 }
